@@ -9,7 +9,7 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.email = ["sulman@hey.com"]
 
   spec.summary = "Currency API is a light wrapper for currencylayer.com API for Rubyists."
-  spec.description = "Currency API is a light wrapper for currencylayer.com API for Rubyists. It gives nice struct objects for currencies and conversions. It uses Faraday for HTTP requests."
+  spec.description = "Currency API is a light wrapper for currencylayer.com API for Rubyists. It gives nice struct objects for currencies and conversions. It uses Faraday for HTTP requests." # rubocop:disable Layout/LineLength
   spec.homepage = "https://github.com/sulmanweb/currency_api"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6"

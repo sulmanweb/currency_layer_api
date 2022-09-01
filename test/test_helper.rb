@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__) # rubocop:disable Style/ExpandPathArguments
 require "currency_api"
 require "minitest/autorun"
 require "faraday"
@@ -16,7 +16,7 @@ class Minitest::Test # rubocop:disable Style/ClassAndModuleChildren
     Faraday::Adapter::Test::Stubs.new do |stub|
       arguments = [method, "/#{path}"]
       arguments << body.to_json if %i[post put patch].include?(method)
-      stub.send(*arguments) { |env| response }
+      stub.send(*arguments) { |_env| response }
     end
   end
 end
