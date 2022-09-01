@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__) # rubocop:disable Style/ExpandPathArguments
-require "currency_api"
+require "currency_layer_api"
 require "minitest/autorun"
 require "faraday"
 require "json"

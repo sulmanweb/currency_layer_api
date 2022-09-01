@@ -1,24 +1,24 @@
 # frozen_string_literal: true
 
-require_relative "lib/currency_api/version"
+require_relative "lib/currency_layer_api/version"
 
 Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
-  spec.name = "currency_api"
-  spec.version = CurrencyApi::VERSION
+  spec.name = "currency_layer_api"
+  spec.version = CurrencyLayerApi::VERSION
   spec.authors = ["Sulman Baig"]
   spec.email = ["sulman@hey.com"]
 
-  spec.summary = "Currency API is a light wrapper for currencylayer.com API for Rubyists."
-  spec.description = "Currency API is a light wrapper for currencylayer.com API for Rubyists. It gives nice struct objects for currencies and conversions. It uses Faraday for HTTP requests." # rubocop:disable Layout/LineLength
-  spec.homepage = "https://github.com/sulmanweb/currency_api"
+  spec.summary = "Currency Layer API is a light wrapper for currencylayer.com API for Rubyists."
+  spec.description = "Currency Layer API is a light wrapper for currencylayer.com API for Rubyists. It gives nice struct objects for currencies and conversions. It uses Faraday for HTTP requests." # rubocop:disable Layout/LineLength
+  spec.homepage = "https://github.com/sulmanweb/currency_layer_api"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6"
 
   # spec.metadata["allowed_push_host"] = "Set to your gem server 'https://example.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/sulmanweb/currency_api"
-  spec.metadata["changelog_uri"] = "https://github.com/sulmanweb/currency_api/blob/main/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/sulmanweb/currency_layer_api"
+  spec.metadata["changelog_uri"] = "https://github.com/sulmanweb/currency_layer_api/blob/main/CHANGELOG.md"
 
   spec.files =
     Dir.chdir(__dir__) do

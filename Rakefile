@@ -15,5 +15,5 @@ end
 task default: :rubocop
 
 task :console do
-  exec "irb -I lib -r currency_api.rb"
+  exec "irb -I lib -r currency_layer_api.rb"
 end

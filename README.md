@@ -1,16 +1,16 @@
-# CurrencyApi
+# CurrencyLayerApi
 
-Currency API is a light wrapper for [currencylayer.com](https://currencylayer.com/) for Rubyists.
+Currency Layer API is a light wrapper for [currencylayer.com](https://currencylayer.com/) for Rubyists.
 
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add currency_api
+    $ bundle add currency_layer_api
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install currency_api
+    $ gem install currency_layer_api
 
 ## Usage
 
@@ -28,8 +28,8 @@ Save the access key in an environment variable named `CURRENCY_LAYER_ACCESS_KEY`
 Currency Layer does not allow you ssl endpoint unless you have a paid account. By default ssl is enabled. To disable ssl, set the `ssl` option to `false`.
 
 ```ruby
-require 'currency_api'
-client = CurrencyApi::Client.new(access_key: ENV['CURRENCY_LAYER_ACCESS_KEY'], ssl: true)
+require 'currency_layer_api'
+client = CurrencyLayerApi::Client.new(access_key: ENV['CURRENCY_LAYER_ACCESS_KEY'], ssl: true)
 ```
 params:
 - `access_key` - Required - String - Your API access key.
@@ -37,7 +37,7 @@ params:
 
 response:
 ```bash
-#<CurrencyApi::Client:0x00007f9b0a0b0a00 @access_key="YOUR_ACCESS_KEY", @ssl=true>
+#<CurrencyLayerApi::Client:0x00007f9b0a0b0a00 @access_key="YOUR_ACCESS_KEY", @ssl=true>
 ```
 
 ### Get List of currencies
@@ -50,8 +50,8 @@ response:
 
 ```bash
 [
-  #<CurrencyApi::Currency:0x00007f9b0a0b0a00 @code="AED", @name="United Arab Emirates Dirham">,
-  #<CurrencyApi::Currency:0x00007f9b0a0b09c0 @code="AFN", @name="Afghan Afghani">,
+  #<CurrencyLayerApi::Currency:0x00007f9b0a0b0a00 @code="AED", @name="United Arab Emirates Dirham">,
+  #<CurrencyLayerApi::Currency:0x00007f9b0a0b09c0 @code="AFN", @name="Afghan Afghani">,
   ...
 ]
 ```
@@ -69,8 +69,8 @@ response:
 
 ```bash
 [
-  #<CurrencyApi::Conversion:0x00007f9b0a0b0a00 @from_code="USD", @to_code="AED", @value=3.6725, @date="2019-01-01">,
-  #<CurrencyApi::Conversion:0x00007f9b0a0b09c0 @from_code="USD", @to_code="EUR", @value=0.888, @date="2019-01-01">,
+  #<CurrencyLayerApi::Conversion:0x00007f9b0a0b0a00 @from_code="USD", @to_code="AED", @value=3.6725, @date="2019-01-01">,
+  #<CurrencyLayerApi::Conversion:0x00007f9b0a0b09c0 @from_code="USD", @to_code="EUR", @value=0.888, @date="2019-01-01">,
 ]
 ```
 
@@ -88,8 +88,8 @@ response:
 
 ```bash
 [
-  #<CurrencyApi::Conversion:0x00007f9b0a0b0a00 @from_code="USD", @to_code="AED", @value=3.6725, @date="2019-01-01">,
-  #<CurrencyApi::Conversion:0x00007f9b0a0b09c0 @from_code="USD", @to_code="EUR", @value=0.888, @date="2019-01-01">,
+  #<CurrencyLayerApi::Conversion:0x00007f9b0a0b0a00 @from_code="USD", @to_code="AED", @value=3.6725, @date="2019-01-01">,
+  #<CurrencyLayerApi::Conversion:0x00007f9b0a0b09c0 @from_code="USD", @to_code="EUR", @value=0.888, @date="2019-01-01">,
 ]
 ```
 
@@ -116,7 +116,7 @@ response:
 ```ruby
 begin
   client.live(from: "USD", to: ["AED", "EUR"])
-rescue CurrencyApi::Error => e
+rescue CurrencyLayerApi::Error => e
     puts e.code
     puts e.message
 end
@@ -130,7 +130,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/currency_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/currency_api/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/currency_layer_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/currency_layer_api/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -138,4 +138,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CurrencyApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/currency_api/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the CurrencyLayerApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/currency_layer_api/blob/main/CODE_OF_CONDUCT.md).

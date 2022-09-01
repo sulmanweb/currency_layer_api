@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module CurrencyApi
-  # Error class for CurrencyApi
+module CurrencyLayerApi
+  # Error class for CurrencyLayerApi
   class Error < StandardError
     attr_reader :code
 

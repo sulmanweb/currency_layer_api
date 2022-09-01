@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module CurrencyApi
-  # Conversion Class for CurrencyApi
+module CurrencyLayerApi
+  # Conversion Class for CurrencyLayerApi
   class Conversion
     attr_reader :from_code, :to_code, :value, :date
 

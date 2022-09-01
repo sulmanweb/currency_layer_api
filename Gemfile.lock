@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    currency_api (0.1.0)
+    currency_layer_api (0.1.0)
       faraday (~> 2.5)
 
 GEM
@@ -42,7 +42,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  currency_api!
+  currency_layer_api!
   minitest (~> 5.16, >= 5.16.3)
   rake (~> 13.0)
   rubocop (~> 1.35)

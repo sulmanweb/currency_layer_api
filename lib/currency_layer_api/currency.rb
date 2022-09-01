@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module CurrencyApi
-  # Currency Class for CurrencyApi
+module CurrencyLayerApi
+  # Currency Class for CurrencyLayerApi
   class Currency
     attr_reader :code, :name
 

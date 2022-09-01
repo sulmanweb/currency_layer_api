@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # rubocop:disable Layout/LineLength
-module CurrencyApi
+module CurrencyLayerApi
   # Client having API methods and access_keys
   class Client
     BASE_URL = "api.currencylayer.com/"
@@ -14,10 +14,10 @@ module CurrencyApi
     # adapter: Symbol (Optional) (Default: :net_http)
     # stubs: Faraday::Adapter::Test::Stubs (Optional) (Default: nil)
     # #### Example:
-    # CurrencyApi::Client.new(access_key: "fake", ssl: false, adapter: :test, stubs: stub)
-    # CurrencyApi::Client.new(access_key: "fake")
+    # CurrencyLayerApi::Client.new(access_key: "fake", ssl: false, adapter: :test, stubs: stub)
+    # CurrencyLayerApi::Client.new(access_key: "fake")
     # #### Description:
-    # Creates a new instance of CurrencyApi::Client with access_key provided by currencylayer.com
+    # Creates a new instance of CurrencyLayerApi::Client with access_key provided by currencylayer.com
     def initialize(access_key:, ssl: true, adapter: Faraday.default_adapter, stubs: nil)
       @access_key = access_key
       @adapter = adapter
@@ -28,11 +28,11 @@ module CurrencyApi
     end
 
     # #### Example:
-    # CurrencyApi::Client.new(access_key: "fake").list
+    # CurrencyLayerApi::Client.new(access_key: "fake").list
     # #### Response:
     # [
-    #   #<CurrencyApi::Currency:0x00007f9b0a0b0a00 @code="AED", @name="United Arab Emirates Dirham">,
-    #   #<CurrencyApi::Currency:0x00007f9b0a0b09c0 @code="AFN", @name="Afghan Afghani">,
+    #   #<CurrencyLayerApi::Currency:0x00007f9b0a0b0a00 @code="AED", @name="United Arab Emirates Dirham">,
+    #   #<CurrencyLayerApi::Currency:0x00007f9b0a0b09c0 @code="AFN", @name="Afghan Afghani">,
     # ]
     # #### Description:
     # Resturns currency object array for all currencies available in currency layer
@@ -44,12 +44,12 @@ module CurrencyApi
     # from: String (Required) (Default: "USD")
     # to: Array (Optional) (Default: nil)
     # #### Example:
-    # CurrencyApi::Client.new(access_key: "fake").live(from: "USD", to: ["AED", "EUR"])
-    # CurrencyApi::Client.new(access_key: "fake").live(from: "EUR")
+    # CurrencyLayerApi::Client.new(access_key: "fake").live(from: "USD", to: ["AED", "EUR"])
+    # CurrencyLayerApi::Client.new(access_key: "fake").live(from: "EUR")
     # #### Response:
     # [
-    #   #<CurrencyApi::Conversion:0x00007f9b0a0b0a00 @from_code="USD", @to_code="AED", @value=3.6725, @date="2019-01-01">,
-    #   #<CurrencyApi::Conversion:0x00007f9b0a0b09c0 @from_code="USD", @to_code="EUR", @value=0.888, @date="2019-01-01">,
+    #   #<CurrencyLayerApi::Conversion:0x00007f9b0a0b0a00 @from_code="USD", @to_code="AED", @value=3.6725, @date="2019-01-01">,
+    #   #<CurrencyLayerApi::Conversion:0x00007f9b0a0b09c0 @from_code="USD", @to_code="EUR", @value=0.888, @date="2019-01-01">,
     # ]
     # #### Description:
     # Returns the current exchange rate for a given from currency and to currencies
@@ -64,12 +64,12 @@ module CurrencyApi
     # from: String (Required) (Default: "USD")
     # to: Array (Optional) (Default: nil)
     # #### Example:
-    # CurrencyApi::Client.new(access_key: "fake").historical(date: "2019-01-01", from: "USD", to: ["AED", "EUR"])
-    # CurrencyApi::Client.new(access_key: "fake").historical(date: "2019-01-01", from: "EUR")
+    # CurrencyLayerApi::Client.new(access_key: "fake").historical(date: "2019-01-01", from: "USD", to: ["AED", "EUR"])
+    # CurrencyLayerApi::Client.new(access_key: "fake").historical(date: "2019-01-01", from: "EUR")
     # #### Response:
     # [
-    #   #<CurrencyApi::Conversion:0x00007f9b0a0b0a00 @from_code="USD", @to_code="AED", @value=3.6725, @date="2019-01-01">,
-    #   #<CurrencyApi::Conversion:0x00007f9b0a0b09c0 @from_code="USD", @to_code="EUR", @value=0.888, @date="2019-01-01">,
+    #   #<CurrencyLayerApi::Conversion:0x00007f9b0a0b0a00 @from_code="USD", @to_code="AED", @value=3.6725, @date="2019-01-01">,
+    #   #<CurrencyLayerApi::Conversion:0x00007f9b0a0b09c0 @from_code="USD", @to_code="EUR", @value=0.888, @date="2019-01-01">,
     # ]
     # #### Description:
     # Returns the historical exchange rate for a given date, from currency and to currencies
@@ -86,8 +86,8 @@ module CurrencyApi
     # amount: Int (Required) (Default: 1)
     # date: String (Optional) ('YYYY-MM-DD')
     # #### Example:
-    # CurrencyApi::Client.new(access_key: "fake").convert(to: "AED", from: "USD", amount: 1)
-    # CurrencyApi::Client.new(access_key: "fake").convert(to: "AED", from: "USD", amount: 1, date: "2019-01-01")
+    # CurrencyLayerApi::Client.new(access_key: "fake").convert(to: "AED", from: "USD", amount: 1)
+    # CurrencyLayerApi::Client.new(access_key: "fake").convert(to: "AED", from: "USD", amount: 1, date: "2019-01-01")
     # #### Response:
     # 3.6725
     # #### Description:
