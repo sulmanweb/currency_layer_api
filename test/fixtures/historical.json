@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "terms": "https://currencylayer.com/terms",
+  "privacy": "https://currencylayer.com/privacy",
+  "historical": true,
+  "date": "2005-02-01",
+  "timestamp": 1107302399,
+  "source": "USD",
+  "quotes": {
+      "USDAED": 3.67266,
+      "USDALL": 96.848753,
+      "USDAMD": 475.798297,
+      "USDANG": 1.790403,
+      "USDARS": 2.918969,
+      "USDAUD": 1.293878
+  }
+}
